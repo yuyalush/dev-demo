@@ -1,0 +1,14 @@
+
+{
+  "name": "demo-api",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["github.copilot", "dbaeumer.vscode-eslint"]
+    }
+  }
+}
