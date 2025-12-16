@@ -1,5 +1,6 @@
 const express = require('express');
 const service = require('./service');
+const apiKey = "AKIA123456789";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
