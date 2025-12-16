@@ -33,6 +33,13 @@ jobs:
           az containerapp update \
             -n ${{ vars.CA_NAME }} \
             -g ${{ vars.RG_NAME }} \
-            --image ${{ vars.ACR_NAME }}.azurecr.io/demo:${{ github.sha }} \
-            --target-port 3000 \
-            --ingress external
+            --image ${{ vars.ACR_NAME }}.azurecr.io/demo:${{ github.sha }} 
+      
+      - name: Ingress Enable
+        run: |
+          az containerapp ingress enable \
+            -n ${{ vars.CA_NAME }} \
+            -g ${{ vars.RG_NAME }} \
+            --type external \
+            --target-port 3000
+            
