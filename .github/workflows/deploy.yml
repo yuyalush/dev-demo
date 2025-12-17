@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [ "copilot/developed-butterfly" ]
+    branches:  [ "main", "copilot/*" ]
 
 permissions:
   id-token: write
